@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Virtual</title>
+    <link rel="stylesheet" href="../css/styletienda.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+   <style>
+        .container{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:space-evenly
+        }
+        .tarjeta{
+            width: 200px;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        .tarjeta img{
+            width: 100%;
+        }
+        .cuerpo{
+            padding: 10px;
+        }
+    </style>
+    <script>
+        function clearCart() {
+            var cartItems = document.getElementById("cart-items");
+            cartItems.innerHTML = "";
+            document.getElementById("cart-total").textContent = "0.00";
+        }
+
+        function validateForm() {
+            var nombre = document.getElementById("Nombre").value;
+            var apellido = document.getElementById("Apellido").value;
+            var correo = document.getElementById("Correo").value;
+            var documento = document.getElementById("Documento").value;
+            var genero = document.querySelector('input[name="genero"]:checked');
+            
+            if (nombre == "" || apellido == "" || correo == "" || documento == "" || !genero) {
+                alert("Todos los campos son obligatorios.");
+                return false;
+            }
+            return true;
+        }
+    </script>    
+</head>
+<body>
+    <div id="app" >
+      <!-- <p>{{datos}}</p> -->
+    <div class="container">
+        <div v-for="elemento in datos" class="tarjeta">
+            <div class="cuerpo">
+                <img width="200" :src="elemento.imagen" :alt="elemento.nombre">
+                <p>id: {{elemento.id}}</p>
+                <p>Nombre: {{elemento.nombre}}</p>
+                <p>Precio: {{elemento.precio}}</p>
+            </div>
+        </div>
+    </div>
+        <h1>Tienda Virtual</h1>
+       
+        <div id="product"></div>
+       
+        <div id="cart">
+            <h2>Carrito de Compras</h2>
+          
+            <div id="cart-items"></div>
+          
+            <p>Total: $<span id="cart-total">0.00</span></p>
+           
+            <!-- Aquí asociamos la función clearCart() al evento onclick del botón -->
+            
+            <button @click="clearCart">Vaciar Carrito</button>
+
+            <button onclick="goToCheckout()">Comprar</button>
+
+
+        </div>
+        <div id="app">
+            <div v-if="error">
+              <p>Ocurrió un error al cargar los datos.</p>
+            </div>
+            
+            <div v-else>
+              <h1>Productos</h1>
+              <div v-for="producto in datos" :key="producto.id">
+                <p>{{ producto.nombre }} - {{ producto.precio }} USD</p>
+                <button @click="addToCart(producto)">Agregar al Carrito</button>
+              </div>
+              
+              <h1>Carrito de Compras</h1>
+              <div v-if="carrito.length === 0">
+                <p>El carrito está vacío.</p>
+              </div>
+              <div v-else>
+                <ul>
+                  <li v-for="(item, index) in carrito" :key="index">
+                    {{ item.nombre }} - {{ item.precio }} USD
+                  </li>
+                </ul>
+                <p>Total: {{ total }} USD</p>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../app.js"></script>
+    
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

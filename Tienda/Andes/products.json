@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "nombre": "Producto 1",
+        "precio": 29.99,
+        "descripcion": "Descripción del producto 1",
+        "imagen":"../Andes/img/2.jpg"
+
+
+    },
+    {
+        "id": 2,
+        "nombre": "Producto 2",
+        "precio": 49.99,
+        "descripcion": "Descripción del producto 2",
+        "imagen":"https://media.c5n.com/p/289e3b2674be05c7db6cd2a32869cd70/adjuntos/326/imagenes/000/235/0000235701/790x0/smart/-alegria-del-hogar-2.jpg"
+    }
+    ,
+    {
+        "id": 3,
+        "nombre": "Producto 2",
+        "precio": 49.99,
+        "descripcion": "Descripción del producto 2",
+        "imagen":"https://media.c5n.com/p/289e3b2674be05c7db6cd2a32869cd70/adjuntos/326/imagenes/000/235/0000235701/790x0/smart/-alegria-del-hogar-2.jpg"
+    }
+    ,
+    {
+        "id": 4,
+        "nombre": "Producto 2",
+        "precio": 49.99,
+        "descripcion": "Descripción del producto 2",
+        "imagen":"https://media.c5n.com/p/289e3b2674be05c7db6cd2a32869cd70/adjuntos/326/imagenes/000/235/0000235701/790x0/smart/-alegria-del-hogar-2.jpg"
+    }
+    ,
+    {
+        "id": 5,
+        "nombre": "Producto 2",
+        "precio": 49.99,
+        "descripcion": "Descripción del producto 2",
+        "imagen":"https://media.c5n.com/p/289e3b2674be05c7db6cd2a32869cd70/adjuntos/326/imagenes/000/235/0000235701/790x0/smart/-alegria-del-hogar-2.jpg"
+    }
+]

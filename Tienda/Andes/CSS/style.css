@@ -1,0 +1,786 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&display=swap');
+/*Es mas optimo importar la fuente */
+
+
+/* Estilo general para las secciones de autenticación */
+.auth-section {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.auth-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction:row ;
+    gap: 15px;
+}
+
+.auth-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.auth-form input:focus {
+    border-color: #404142;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.25);
+}
+
+.auth-button {
+    padding: 10px;
+    background-color: #3c3d3f;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+    background-color: #5d6369;
+}
+
+/* Adaptabilidad a dispositivos móviles */
+@media (max-width: 600px) {
+    .auth-section {
+        padding: 15px;
+    }
+}
+body {
+    font-size: 16px;
+}
+
+/* Estilo para tabletas */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .contactform {
+        width: 80%;
+    }
+}
+
+/* Estilo para teléfonos móviles */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    .contactform {
+        width: 95%;
+    }
+
+    /* Ajustar el tamaño de las imágenes */
+    img {
+        width: 100%;
+    }
+}
+
+
+
+.contactform {
+    width: 50%; /* En vez de usar píxeles fijos */
+    margin: 0 auto; /* Centrar la forma */
+}
+
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    background-color: rgb(14, 13, 13);
+    padding: 10px 20px;
+    border: 2px solid black; /* Borde negro */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para un efecto visual */
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+    flex: 1; /* Toma el espacio disponible a la izquierda */
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remueve el subrayado del enlace */
+    color: inherit; /* Hereda el color del texto */
+}
+
+header .logo img {
+    max-height: 50px; /* Ajusta el tamaño de la imagen */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+header .nombre-tienda {
+    font-size: 1.5em; /* Tamaño de fuente del nombre de la tienda */
+    margin: 0; /* Elimina márgenes predeterminados */
+}
+
+header nav {
+    display: flex;
+    flex: 2; /* Toma el espacio disponible al centro */
+    justify-content: center; /* Centra los enlaces de navegación */
+    gap: 20px; /* Espacio entre los enlaces de navegación */
+}
+
+header nav a {
+    text-decoration: none; /* Remueve el subrayado de los enlaces */
+    color: #333; /* Color del texto de los enlaces */
+    font-weight: bold; /* Fuente en negrita para los enlaces */
+}
+
+header nav a:hover {
+    color: #a9c6e6; /* Color de los enlaces al pasar el cursor */
+}
+
+
+.nav{ 
+     color: #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+} 
+.contactform{
+    
+}
+
+
+
+@media (min-width: 769px) {
+    .header, .nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.contactform {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 10px;
+}
+
+.andes{
+
+    margin-top: 30%;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.imagen {
+    position: relative;
+     width:auto;
+     height: auto;
+     clip-path: polygon(0 0, 100% 0, 100% 90%,0 90%);
+    }
+
+
+
+
+.imagen img {
+   
+    
+    display: block;
+    width: 100%;
+    height: auto;
+
+}
+
+   .imagen .texto {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(192, 192, 182, 0); /* Opacidad inicial al cargar la página */
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    transition-duration: 0.5s ; /* Transición de opacidad al pasar el mouse */
+
+}
+
+
+.imagen .texto:hover {
+    opacity: 50%; /* Opacidad al pasar el mouse */
+;
+
+}
+
+
+.imagen:hover .texto {
+    transform: translate(-50%, -50%); /* Vuelve a la posición original al pasar el mouse */
+}
+.barra{
+
+
+
+.imagen .texto {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(192, 192, 182, 0); /* Opacidad inicial al cargar la página */
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    transition-duration: 0.5s ; /* Transición de opacidad al pasar el mouse */
+
+}
+
+
+.imagen .texto:hover {
+    opacity: 50%; /* Opacidad al pasar el mouse */
+;
+
+}
+
+
+.imagen:hover .texto {
+    transform: translate(-50%, -50%); /* Vuelve a la posición original al pasar el mouse */
+}
+
+----------------------------------------------------------------------------------------
+
+.imagen .texto1 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(192, 192, 182, 0); /* Opacidad inicial al cargar la página */
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    transition-duration: 0.5s ; /* Transición de opacidad al pasar el mouse */
+
+}
+
+
+.imagen .texto1:hover {
+    opacity: 50%; /* Opacidad al pasar el mouse */
+;
+
+}
+
+
+.imagen:hover .texto1 {
+    transform: translate(-50%, -50%); /* Vuelve a la posición original al pasar el mouse */
+}
+
+
+
+
+
+
+}
+
+
+
+/* Contenedor de autenticación */
+.auth-container {
+ 
+ 
+    position: absolute;
+    top: 30%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    width: 15%;
+    max-width: 200px;
+    background-color:color(from color srgb r g b) rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo general para las secciones de autenticación */
+.auth-section {
+    margin: 5px 0;
+}
+
+.auth-section h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.auth-form input {
+    padding: 5px;
+    border:color(from color srgb r g b) 1px ;
+    border-radius: 4px;
+    font-size: 8px;
+}
+
+
+
+
+@keyframes fadeIn {
+    from {
+        color: rgba(117, 116, 112, 0); /* Opacidad inicial */
+    }
+    to {
+        color: rgba(117, 116, 112, 1); /* Opacidad final */
+    }
+}
+
+.imagen .texto {
+    animation: fadeIn 1s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Animación al cargar la página */
+    animation-fill-mode: forwards; /* Para mantener el estado final de la animación */
+    
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        color: rgba(117, 116, 112, 0); /* Opacidad inicial */
+    }
+    to {
+        color: rgba(117, 116, 112, 1); /* Opacidad final */
+    }
+}
+
+ 
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+/*box-sizing:restarle el contenido de margin y padding para no desbordar */
+
+
+
+
+.nombre-tienda{
+    font-weight: 900;
+color: rgb(180, 183, 205);
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo1{
+    
+    
+    
+
+
+}
+
+
+.logo img{
+    height: 50px;
+    margin-right: 10px;
+}
+
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+nav a:hover{
+    color: rgb(125, 119, 119);
+}
+
+.imagen img{
+    width: 100%;
+    height: auto;
+}
+
+form{
+    display: flex;
+    align-items: center;
+}
+
+body{
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 4.5rem;
+}
+
+
+
+article{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 1%;
+    margin: 1%;
+}
+
+article{
+    max-width: 30%;
+    height: auto;
+}
+.imagen-ropa{
+    width: 100%;
+    height: auto;
+}
+
+h1{ 
+    
+    text-align: center;
+    font-size: 50px  ;
+}
+
+h2{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+      
+}
+
+
+
+.subtitulo{
+    margin-top: 100px; /* Mueve el h1 hacia abajo */
+    
+    
+}
+
+
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4.5rem;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+
+--------------------------------------------------------------------------------------------------------
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container img {
+    display: block;
+    width: 100%; /* Asegura que la imagen se adapte al contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.overlay-text {
+    position: absolute;
+    top: 40%; /* Centra verticalmente el texto */
+    left: 50%; /* Centra horizontalmente el texto */
+    transform: translate(-50%, -50%); /* Ajusta el centrado debido a top y left al 50% */
+    color: rgb(0, 0, 0); /* Color del texto */
+    background-color:transparent /* Fondo semi-transparente */
+
+}
+
+.overlay-text1 {
+    
+    position: absolute;
+    top: 20%; /* Centra verticalmente el texto */
+    left: 50%; /* Centra horizontalmente el texto */
+    transform: translate(-50%, -50%); /* Ajusta el centrado debido a top y left al 50% */
+    color:color(from color srgb r g b); /* Color del texto */
+    background-color:transparent; /* Fondo semi-transparente */
+    padding: 10px;
+    border-radius: 5px;
+}
+--------------------------------------------------------------------------------------------------------
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/*box-sizing:restarle el contenido de margin y padding para no desbordar */
+
+
+
+
+.imagen img {
+    width: 100%;
+    height: auto;
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 4.5rem;
+}
+
+article {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 1%;
+    margin: 1%;
+}
+
+article {
+    max-width:500%;
+    height: auto;
+    margin-right: 100px;
+}
+
+.imagen-ropa {
+    width: 100%;
+    height: auto;
+}
+
+.barra{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    padding: 30px;
+    background-color: #d7d4d4;
+    margin-bottom: 30px;
+    color: #333;
+
+}
+
+h2 {
+    text-align: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 7.5rem;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+
+
+.contenedor-footer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.contenedor-footer .icono {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contenedor-footer .icono:hover {
+    color: #1da1f2; /* Cambia el color cuando se pasa el cursor sobre el ícono */
+}
+
+
+footer {
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.contenedor-footer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contenedor-footer .icono {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contenedor-footer .icono:hover {
+    color: #0be70b; /* Cambia el color cuando se pasa el cursor sobre el ícono */
+    transform: scale(1.2); /* Aumenta el tamaño del ícono */
+}
+
+
+
+
+
+
+
+
+
+
+/* logo watshapp
+.fa.brands{
+    margin: 1%;
+    font-size: 4rem;
+    position: 5%;
+    bottom: 5%;
+    right: 2%;
+    z-index: 20;
+}*/
+
+
+
+
+/*indumentaria*/
+.container-icono {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.container-iconov {
+    width: 100%;
+    height: auto;   /* Mantiene la relación de aspecto */
+       
+    display: flex;
+    justify-content: flex-end;
+    padding: 50px;
+    background-color: #d7d4d4;
+    
+    margin-bottom: 30px;
+    color: #333;
+}
+.container-icono img {
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+
+
+.contenedor-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.item {
+    border-radius: 10px;
+}
+
+.item :hover {
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.20);
+}
+
+.item img {
+    width: 80%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all .5s;
+}
+
+.item figure {
+    overflow: hidden;
+}
+
+.item:hover img {
+    transform: scale(1.2);
+
+}
+
+.info-producto {
+    padding: 15px 30px;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.price {
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.info-producto button {
+    border: none;
+    background: none;
+    background-color: black;
+    color: white;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+.redesociales{
+ font-size: 30px;    
+}
+.copyrigth{
+
+    font-size: 10px;
+    
+}
+
+#barradebusqueda{
+
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: 10px auto;
+}
+
+.recortar-imagen {
+    width: 300px;
+    height: auto;
+    clip-path: polygon(100 , 100% 0, 100% 75%, 0 75%);
+  }
+
+  .mapa{
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 25%;
+    margin: 10px auto;
+   
+  }
+
+  .sectiontiendas{
+    margin-top: 150px;
+  }

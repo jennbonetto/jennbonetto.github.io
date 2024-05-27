@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>Andes-Contacto</title>
+    <script>
+        function validateForm() {
+            var nombre = document.getElementById("Nombre").value;
+            var apellido = document.getElementById("Apellido").value;
+            var correo = document.getElementById("Correo").value;
+            var documento = document.getElementById("Documento").value;
+            var genero = document.querySelector('input[name="genero"]:checked');
+            
+            if (nombre == "" || apellido == "" || correo == "" || documento == "" || !genero) {
+                alert("Todos los campos son obligatorios.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+    
+</head>
+
+
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="../index.html" class="logo" alt="Logo de Andes">
+                <img src="../img/Logo-tienda.png" alt="Logo de Andes">
+                <h2 class="nombre-tienda">Andes</h2>
+            </a>
+        </div>
+                   
+        <nav>
+            <a href="../index.html" class="nav">Inicio</a>
+            <a href="Indumentaria.html" class="nav">Indumentaria</a>
+            <a href="Sobre_nosotros.html" class="nav">Sobre Nosotros</a>
+            <a href="contacto.html" class="nav">Contacto</a>
+            <a href="tiendas.html" class="nav">Tiendas</a>
+        </nav>
+   
+    </header>
+ 
+  
+  
+    <div class="contactform">
+    <form onsubmit="return validateForm()">
+        <fieldset>
+            <legend>Contáctanos</legend>
+            <label for="Nombre">Nombre</label>
+            <input id="Nombre" type="text" size="30" name="firstname" placeholder="Tu nombre" required>
+            <br><br>
+            <label for="Apellido">Apellido</label>
+            <input id="Apellido" type="text" size="30" name="lastname" placeholder="Tu apellido" required>
+            <br><br>
+            <label for="Correo">Email</label>
+            <input id="Correo" type="email" size="30" name="email" placeholder="Tu correo electrónico" required>
+            <br><br>
+            <label for="tipo_doc">Tipo de documento</label>
+            <select id="tipo_doc" name="type_id" required>
+                <option value="DNI">DNI</option>
+                <option value="CUIT">CUIT</option>
+                <option value="Pasaporte">Pasaporte</option>
+            </select>
+            <br><br>
+            <label for="Documento">Documento</label>
+            <input id="Documento" type="text" size="30" name="id" placeholder="Número de documento" required>
+            <br><br>
+            <label>Género</label>
+            <input type="radio" id="masculino" name="genero" value="masculino" required>
+            <label for="masculino">Masculino</label>
+            <input type="radio" id="femenino" name="genero" value="femenino" required>
+            <label for="femenino">Femenino</label>
+            <input type="radio" id="otro" name="genero" value="otro" required>
+            <label for="otro">Otro</label>
+            <br><br>
+            <label for="telefono">Teléfono</label>
+            <input id="telefono" type="tel" name="telefono" placeholder="Tu teléfono" required>
+            <br><br>
+            <label for="fecha">Fecha de Nacimiento</label>
+            <input id="fecha" type="date" name="birthdate" required>
+            <br><br>
+            <label for="Mensaje">Mensaje</label>
+            <br>
+            <textarea id="Mensaje" name="message" rows="5" cols="30" placeholder="Tu mensaje" required></textarea>
+            <br>
+            <img src="../img/contacto.jpg" alt="Imagen de contacto" width="300">
+            <br><br>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+        </fieldset>
+    </form>
+</div>
+
+</body>
+
+</html>
